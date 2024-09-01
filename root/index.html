@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Messaging platform</title>
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" />
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- ===================================================== Navbar ================================================= -->
+
+    <header>
+        <nav>
+            <img src="/assets/logo.jpeg" alt="" />
+            <ul>
+                <li><a href="#" onclick="showSection('home')">Home</a></li>
+                <li>
+                    <a href="#" onclick="showSection('registration')">Registration</a>
+                </li>
+                <li><a href="#" onclick="showSection('feed')">Feed</a></li>
+                <li><a href="#" onclick="showSection('messages')">Messages</a></li>
+                <li><a href="#" onclick="showSection('profile')">Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- =================================================== Login Section ========================================== -->
+    <div id="home" class="section">
+        <!-- <h1>Welcome to the Home Page</h1> -->
+
+        <div class="main_section">
+            <div class="login-panel">
+                <h1 id="heading">Log In</h1>
+                <form id="createUserForm" method="POST">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" placeholder="username" autocomplete="off"
+                        required />
+                    <br />
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="password" required />
+                    <br />
+                    <button type="submit" value="Submit" class="btn-submit">Login</button>
+                </form>
+
+                <p>
+                    New User ?
+                    <a href="#" onclick="showSection('registration')">Sign up here</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- =============================================== Registration Section ====================================== -->
+
+    <div id="registration" class="section hidden">
+        <!-- <h1>Registration Page</h1> -->
+        <div class="main_section">
+            <div class="login-panel">
+                <h1 id="heading">Registration</h1>
+                <form id="registrationForm" method="POST">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="email" autocomplete="off" required />
+                    <br />
+                    <label for="username">Username</label>
+                    <input type="text" id="name" name="username" placeholder="Name" autocomplete="off" required />
+                    <br />
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="password" required />
+                    <br />
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" id="password" name="confirmPassword" placeholder="confirmPassword"
+                        required />
+                    <br />
+                    <button type="submit" value="Register" class="submit">Register</button>
+                </form>
+                
+            </div>
+        </div>
+    </div>
+    <!-- =================================================== Feed Section ========================================== -->
+
+    <div id="feed" class="section hidden">
+        <div class="feed_section">
+            <div class="logo">
+                <img src="/assets/download.png" alt="" />
+            </div>
+            <div class="main-content">
+                <form id="feedcreate" method="POST">
+                    <input type="text" id="name" name="name"  placeholder=" share what's new ....... " autocomplete="off" required />
+                    <label for="content">Message</label>
+                    <input name="content" id="content" />
+
+                    <button type="submit" class="submit">Add</button>
+                </form>
+
+            </div>
+        </div>
+        <div class="feed_section">
+            <div class="logo">
+                <img src="/assets/jane.jpeg" alt="" />
+            </div>
+            <div class="main-content">
+                <fieldset>
+                    <legend>
+                        <h3>Jane Smith 2:15PM</h3>
+                    </legend>
+                    <h5>Anniversery Weekend Antics !!!</h5>
+                    <img src="/assets/anniversery.jpg" alt="" />
+                </fieldset>
+            </div>
+        </div>
+        <div class="feed_section">
+            <div class="logo">
+                <img src="/assets/sally.jpeg" alt="" />
+            </div>
+            <div class="main-content">
+                <fieldset>
+                    <legend>
+                        <h3>Sally Hansen 12:45PM</h3>
+                    </legend>
+                    <h5>Today is my Birthday</h5>
+                </fieldset>
+            </div>
+        </div>
+        <div id="FeedPost"></div>
+    </div>
+    <!-- =================================================== Message Section ========================================== -->
+
+    <div id="messages" class="section hidden">
+        <div class="message-btn">
+            <button class="message-btn" onclick="showSection('new_message')">Add new message</button>
+        </div>
+        <div class="message_section">
+            <div class="logo">
+                <img src="/assets/ammy.jpeg" alt="" />
+            </div>
+            <div class="main-content">
+                <div class="top">
+                    <h5>Amy</h5>
+                    <span>7:43PM</span>
+                </div>
+                <div class="bottom">
+                    <p>Why ? What Happened ?</p>
+                </div>
+            </div>
+        </div>
+        <div class="message_section">
+            <div class="logo">
+                <img src="/assets/sally.jpeg" alt="" />
+            </div>
+            <div class="main-content">
+                <div class="top">
+                    <h5>Sally</h5>
+                    <span>4:27PM</span>
+                </div>
+                <div class="bottom">
+                    <p>Of course, let me know</p>
+                </div>
+            </div>
+        </div>
+        <div class="message_section">
+            <div class="logo">
+                <img src="/assets/jane.jpeg" alt="" />
+            </div>
+            <div class="main-content">
+                <div class="top">
+                    <h5>Jane</h5>
+                    <span>2:11PM</span>
+                </div>
+                <div class="bottom">
+                    <p>Yay</p>
+                </div>
+            </div>
+        </div>
+        <div class="message_section">
+            <div class="logo">
+                <img src="/assets/jack.jpeg" alt="" />
+            </div>
+            <div class="main-content">
+                <div class="top">
+                    <h5>Jack</h5>
+                    <span>12:20PM</span>
+                </div>
+                <div class="bottom">
+                    <p>Have a good Day.</p>
+                </div>
+            </div>
+        </div>
+        <div id="Posts"></div>
+    </div>
+    <!-- =================================================== New Message Section ========================================== -->
+
+    <div id="new_message" class="section hidden">
+        <div class="main_section">
+            <div class="login-panel">
+                <h1 id="heading">Add new message</h1>
+                <form id="messagecreate" method="POST">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Name" autocomplete="off" required />
+                    <label for="content">Message</label>
+                    <textarea name="content" id="content" cols="30" rows="10"></textarea>
+                    <button type="submit" class="submit">Add new message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- =================================================== Profile Section ========================================== -->
+    <div id="profile" class="section hidden">
+        <div class="profile-btn">
+            <button class="profile-btn" onclick="showSection('new_profile')">Create new Profile</button>
+        </div>
+        <main class="profile-main">
+            <div class="profile-top">
+                <img src="/assets/1.3b8ad2c7b1be2caf24321c852103598a-scaled.jpg" alt="" />
+            </div>
+            <div class="profile-bottom">
+                <div class="left">
+                    <img src="/assets/lauren.jpeg" alt="" />
+                </div>
+                <div class="right">
+                    <h3>Lauren Freeman</h3>
+                    <span>27</span>
+                    <span>Stylist</span>
+                    <span>Paris , France</span>
+                </div>
+            </div>
+        </main>
+        <div class="bottom-page">
+            <div class="bottom-heading">
+                <fieldset class="paris-fieldset">
+                    <legend>
+                        <h3>You 6:43PM</h3>
+                    </legend>
+                    <h5>Some Picture From Paris Fashion Week :/</h5>
+                    <div class="bottom-image">
+                        <img src="/assets/pic1.avif" alt="" sizes="" srcset="" />
+                        <img src="/assets/pic2.avif" alt="" sizes="" srcset="" />
+                        <img src="/assets/pic3.avif" alt="" sizes="" srcset="" />
+                        <img src="/assets/pic4.avif" alt="" sizes="" srcset="" />
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+    </div>
+    <!-- =================================================== New Profile Section ========================================== -->
+
+    <div id="new_profile" class="section hidden">
+        <div class="main_section">
+            <div class="login-panel">
+                <h1 id="heading">Create new Profile</h1>
+                <form id="profileReg" method="POST">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Name" autocomplete="off" required />
+                    <label for="age">Age</label>
+                    <input type="text" id="age" name="age" placeholder="Age" autocomplete="off" required />
+                    <label for="job">Job</label>
+                    <input type="text" id="job" name="job" placeholder="Job" autocomplete="off" required />
+                    <label for="city">City</label>
+                    <input type="text" id="city" name="city" placeholder="City" autocomplete="off" required />
+                    <button type="submit" class="submit">Profile Created</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- =================================================== Section End ========================================== -->
+
+    <!-- External JavaScript file -->
+    <script src="/scripts/script.js"></script>
+    <script>
+        async function fetchBackendUrl() {
+            try {
+                const response = await fetch('http://localhost:8080/M00755729/backendUrl');
+                const data = await response.json();
+                const backendUrl = data.url;
+                window.location.href = backendUrl;
+            } catch (error) {
+                console.error('Error fetching backend URL:', error);
+            }
+        }
+    
+        fetchBackendUrl();
+    </script>
+
+    <script>
+        document
+  .getElementById("feedcreate")
+  .addEventListener("submit", async function (event) {
+    event.preventDefault();
+    const formData = new FormData(this);
+    const response = await fetch(
+      "http://localhost:8080/MOO755729/MOO755729/createFeed",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(Object.fromEntries(formData)),
+      }
+    );
+    const data = await response.json();
+    if (response.ok) {
+      alert(data.message);
+      showSection("feeds");
+    } else {
+      alert(data.message);
+    }
+    this.reset();
+  });
+
+async function fetchFeeds() {
+  try {
+    const response = await fetch(
+      "http://localhost:8080/MOO755729/MOO755729/getFeeds"
+    );
+    const feeds = await response.json();
+    console.log(feeds);
+    const feedsDiv = document.getElementById("FeedPosts");
+    feedsDiv.innerHTML = "";
+    feeds.forEach((feed) => {
+      const feedDiv = document.createElement("div");
+      feedDiv.innerHTML = `
+      <div class="main-content">
+                <fieldset>
+                    <legend>
+                        <h3>${feed.name}</h3>
+                    </legend>
+                    <h5>${feed.content}</h5>
+                </fieldset>
+            </div>
+    `;
+      feedsDiv.appendChild(feedDiv);
+    });
+  } catch (error) {
+    console.error("Error fetching feeds:", error);
+  }
+}
+
+window.addEventListener("load", fetchFeeds);
+
+function refreshPage() {
+  location.reload();
+}
+    </script>
+    </body>
+
+</html>

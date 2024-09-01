@@ -1,0 +1,340 @@
+
+/* Reset default styles */
+body {
+  background-color: #c5c6c7c2;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins';
+}
+
+/* Navigation styling */
+nav {
+  height: 10vh;
+  background-color: #06887d;
+  display: flex;
+  align-items: flex-start;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  list-style: none;
+  text-align: center;
+  margin-left: 18%; /* Adjust the left margin as needed */
+}
+
+nav ul li {
+  gap: 15px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 5px 15px;
+  border-radius: 3px;
+  transition: background-color 0.3s, color 0.3s;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  -webkit-transition: background-color 0.3s, color 0.3s;
+  -moz-transition: background-color 0.3s, color 0.3s;
+  -ms-transition: background-color 0.3s, color 0.3s;
+  -o-transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #10110e;
+}
+
+/* Header image styling */
+header img {
+  height: 10vh;
+  margin-left: 2%;
+  width: 7vw;
+}
+
+/* Main section styling */
+.main_section {
+  margin: auto;
+  margin-top: 3%;
+  width: 50%;
+  background-color: #ffffffd2;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+/* Message section styling */
+.message_section {
+  margin: auto;
+  margin-top: 2.5%;
+  width: 75%;
+  padding: 25px;
+  background-color: #ffffffd2;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 7vh;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.message_section .main-content {
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+}
+.message_section .logo img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 12vh;
+  width: 5.9vw;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+}
+
+.main-content .top,
+.main-content .bottom {
+  height: 6vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Heading styling */
+#heading {
+  margin: auto;
+  color: #fff;
+  background-color: #06887d;
+  width: 50%;
+  height: 8vh;
+  display: flex;
+  margin-bottom: 5%;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+}
+.message-btn{
+  display: flex;
+  margin-top: .5%;
+  justify-content: flex-end;
+  margin-right: 6%;
+}
+.profile-btn{
+  display: flex;
+  margin-top: .5%;
+  justify-content: flex-end;
+  margin-right: 5.5%;
+}
+
+/* Form input styling */
+input[type="email"],
+input[type="password"],
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  outline-color: #05867c;
+}
+
+/* Button styling */
+button {
+  background-color: #06887d;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #024e48;
+}
+
+/* Topic heading styling */
+#topic_heading {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/* Feed section styling */
+.feed_section {
+  margin: auto;
+  margin-top: 2.5%;
+  width: 75%;
+  padding: 25px;
+  background-color: #ffffffd2;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  height: auto;
+}
+
+.feed_section .main-content {
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+}
+
+.feed_section .logo img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10vh;
+  width: 5vw;
+}
+
+/* Fieldset styling */
+fieldset {
+  border: 3px solid #024e48;
+}
+
+/* Profile section styling */
+.profile-main {
+  margin: auto;
+  height: auto;
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-main .profile-top img {
+  height: 50vh;
+  width: 96%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+
+.profile-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+#new_message #heading{
+  width: 50%;
+}
+#new_profile #heading{
+  width: 50%;
+}
+.profile-bottom .left img {
+  border: 2px solid #024e48;
+  height: 25vh;
+  width: 10vw;
+}
+
+.profile-bottom .right {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+
+/* Bottom section styling */
+.bottom-page {
+  margin: auto;
+  width: 85%;
+  display: flex;
+}
+
+.bottom-image img{
+  height: 35vh;
+  width: 18vw;
+  margin: 2px;
+  border: 3px solid white;
+}
+.paris-fieldset{
+  width: 100%;
+}
+@media only screen and (max-width: 1080px) {
+  nav{
+    font-size: .8rem;
+  }
+  nav ul{
+    margin-left: 15%;
+  }
+#heading {
+width: auto;
+}
+.message_section .logo img{
+  height: 10vh;
+  width: 6vw;
+}
+.bottom-page{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+ 
+}
+
+@media only screen and (max-width: 760px) {
+  nav{
+    font-size: .8rem;
+  }
+  nav ul{
+    margin-left: 10%;
+  }
+#heading {
+width: auto;
+}
+.message_section .logo img{
+  height: 10vh;
+  width: 8vw;
+}
+.bottom-image img{
+align-items: center;
+} 
+}
+@media only screen and (max-width: 600px) {
+  nav{
+    font-size: .8rem;
+  }
+  nav ul{
+    margin-left: 1%;
+  }
+  #heading {
+    width: auto;
+    }
+    .message_section .logo img{
+      height: 7vh;
+      width: 8vw;
+    }  
+    .bottom-image{
+      display: flex;
+      flex-direction: column;
+      /* align-items: center; */
+      justify-content: center;
+    }
+}
+@media only screen and (max-width: 490px) {
+  nav{
+    font-size: .7rem;
+  }
+  #heading {
+    width: auto;
+    }
+    .message_section .logo img{
+      height: 7vh;
+      width: 8vw;
+    }  
+}
